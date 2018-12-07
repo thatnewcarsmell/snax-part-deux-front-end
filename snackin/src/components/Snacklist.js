@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Snacklist = () => {
+const Snacklist = (props) => {
     return (
       <div>
-        <div>Snacklist</div>
+        {props.data.map(snack => {
+            return (
+            <div>
+                <div>{snack.name}</div>
+                <div>{snack.description}</div>
+                <div>{snack.is_perishable}</div>
+                <img src={snack.img} />
+            </div>
+            )
+
+        })}
       </div>
     )
   }
