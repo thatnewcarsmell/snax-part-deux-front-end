@@ -15,7 +15,7 @@ const Navbar = (props) => {
               Sign up
           </button>
         </div>
-        <Login logIn={props.logIn} signUp={props.signUp}/>
+        <Login setLast={props.setLast} setEmail={props.setEmail} setPassword={props.setPassword} setName={props.setName} logIn={props.logIn} signUp={props.signUp}/>
       </nav>
     )
   }
