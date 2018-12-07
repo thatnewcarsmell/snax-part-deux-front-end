@@ -10,6 +10,43 @@ const Snacklist = (props) => {
                 <div className="card-body">
                   <h5 className="card-title">{snack.name}</h5>
                 </div>
+                <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target={'#'+snack.id}>
+                    View
+                </button>
+                <div className="modal" id={snack.id} tabindex="-1" role="dialog">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">{snack.name}</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            <div>Product Description: {snack.description}</div>
+                            <div><img class="card-img-top" src={snack.img} alt="img" height="200px"/></div>
+                            <div>Price: ${snack.price}</div>
+                            <div>Perishability: {snack.is_perishable ? "yes" : "no"}</div>
+                            {snack.reviews ?
+                                    snack.reviews.map(review => {
+                                        return(
+                                        <div>
+                                            <div>{review.title}</div>
+                                            <div>{review.text}</div>
+                                            <div className={'star_'+review.rating}>{review.rating}</div>
+                                        </div>
+                                        )
+                                    })
+                                    : <div>no reviews</div>
+                            }
+                            
+                        </div>
+                        <button type="button" class="btn btn-outline-light my-2 my-sm-0">
+                            Add a review
+                        </button>
+                    </div>
+                </div>
+            </div>
               </div>
             )
 
