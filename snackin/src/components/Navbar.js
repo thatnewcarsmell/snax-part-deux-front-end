@@ -15,7 +15,7 @@ const Navbar = (props) => {
               Sign up
           </button>
         </div>
-        <Login />
+        <Login logIn={props.logIn} signUp={props.signUp}/>
       </nav>
     )
   }
