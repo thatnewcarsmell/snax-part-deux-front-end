@@ -56,7 +56,7 @@ const Snacklist = (props) => {
                             
                         </div>
                         </div>
-                        <button type="btn" className="btn text-body my-2 my-sm-0">
+                        <button type="btn" className="btn text-body my-2 my-sm-0" onClick={(e) => props.submitReview(e)}>
                             Add a review
                         </button>
                     </div>
