@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.snackcard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px;
+  margin-bottom: 50px;
+}
+.card {
+  margin: 10px;
+}
+.card-title {
+  font-size: 1em;
+}
+.card-body {
+  height: 4em;
+}

@@ -2,15 +2,15 @@ import React from 'react';
 
 const Snacklist = (props) => {
     return (
-      <div>
+      <div  className="snackcard">
         {props.data.map(snack => {
             return (
-            <div>
-                <div>{snack.name}</div>
-                <div>{snack.description}</div>
-                <div>{snack.is_perishable}</div>
-                <img src={snack.img} />
-            </div>
+              <div class="card" style={{width: 15+'rem'}}>
+                <img class="card-img-top" src={snack.img} alt="img" height="200px"/>
+                <div class="card-body">
+                  <h5 class="card-title">{snack.name}</h5>
+                </div>
+              </div>
             )
 
         })}
