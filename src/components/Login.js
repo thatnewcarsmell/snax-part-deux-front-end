@@ -1,10 +1,4 @@
 import React from 'react';
-var user = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: ""
-}
 
 const Login = (props) => {
     return (
@@ -13,7 +7,7 @@ const Login = (props) => {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">Please sign in below.</h5>
+                            <h5 className="modal-title">Please sign in below</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -29,7 +23,7 @@ const Login = (props) => {
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                                 </div>
-                                <button type="submit" className="btn btn-primary" onClick={(e) => props.logIn(e)}>Submit</button>
+                                <button type="submit" className="btn btn-primary" onClick={ props.logIn }>Submit</button>
                             </form>
                         </div>
                     </div>
@@ -48,24 +42,24 @@ const Login = (props) => {
                             <form>
                                 <div className="form-group">
                                     <label for="exampleInputFirst">First Name</label>
-                                    <input type="text" onChange={(e) => props.setName(e)} className="form-control" id="exampleInputFirst" aria-describedby="lastHelp" placeholder="Enter first name"/>
+                                    <input type="text" onChange={ props.setName } className="form-control" id="exampleInputFirst" aria-describedby="lastHelp" placeholder="Enter first name"/>
                                     <small id="firstHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="exampleInputLast">Last Name</label>
-                                    <input type="text" onChange={(e) => props.setLast(e)} className="form-control" id="exampleInputLast" aria-describedby="astHelp" placeholder="Enter last name"/>
+                                    <input type="text" onChange={ props.setLast } className="form-control" id="exampleInputLast" aria-describedby="astHelp" placeholder="Enter last name"/>
                                     <small id="lastlHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" onChange={(e) => props.setEmail(e)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                                    <input type="email" onChange={ props.setEmail } className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" onChange={(e) => props.setPassword(e)} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                                    <input type="password" onChange={ props.setPassword } className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                                 </div>
-                                <button type="submit" className="btn btn-primary" onClick={(e) => props.signUp(e)}>Submit</button>
+                                <button type="submit" className="btn btn-primary" onClick={ props.signUp }>Submit</button>
                             </form>
                         </div>
                     </div>
@@ -75,4 +69,4 @@ const Login = (props) => {
     )
   }
   
-  export default Login
+  export default Login;

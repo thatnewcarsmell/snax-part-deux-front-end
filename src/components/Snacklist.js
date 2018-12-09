@@ -70,4 +70,4 @@ const Snacklist = (props) => {
     )
   }
   
-  export default Snacklist 
+  export default Snacklist; 
