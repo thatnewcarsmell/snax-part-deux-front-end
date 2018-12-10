@@ -48,7 +48,7 @@ class App extends Component {
         first_name: this.state.firstName,
         last_name: this.state.lastName,
         email_address: this.state.emailAddress,
-        password: this.state.password
+        hashed_password: this.state.password
       })
     })
     !this.state.loggedIn ? this.setState({loggedIn: true}) : this.setState({loggedIn: true})
